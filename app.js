@@ -1,13 +1,25 @@
-const displayKey = document.querySelector('.key h2');
-const displayKeyCode = document.querySelector('.keyCode h2');
-const keyCodeDiv = document.querySelector('.keyCode');
+const insert = document.getElementById('insert');
 
-window.addEventListener('keydown',(e)=>{
-    displayKey.innerText = e.key;
-    displayKeyCode.innerText = e.keyCode;
-    if(e.keycode  == 32){
-        displayKey.innerText = `'space'`;
-    }
-})
+window.addEventListener('keydown', (e) => {
+	console.log(e);
 
-console.log(displayKey);
+// use innerHTML to write new content to div "key"
+	insert.innerHTML = `
+		<div class="key">
+			${e.key === ' ' ? 'Space' : e.key}
+			<small>event.key</small>
+		</div>
+		<div class="key">
+			${e.keyCode}
+			<small>event.keyCode</small>
+		</div>
+		<div class="key">
+			${e.code}
+			<small>event.code</small>
+		</div>
+        <div class="key">
+			${e.which}
+			<small>event.which</small>
+		</div>
+	`
+});

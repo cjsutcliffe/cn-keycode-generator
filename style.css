@@ -1,63 +1,41 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	box-sizing: border-box;
 }
 
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-    background-color: aliceblue;
+
+body {
+	background: rgb(252, 208, 255);
+	display: flex;
+	font-family: 'Roboto';
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	margin: 0;
+	text-align: center;
 }
 
-section{
-    min-height: 10vh;
-    width: 100%;
-    padding: 100px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.key {
+	background-color: rgb(113, 120, 128);
+	display: inline-flex;
+	font-size: 20px;
+	flex-direction: column;
+	align-items: center;
+	font-weight: bold;
+    color: antiquewhite;
+	padding: 20px;
+	position: relative;
+	margin: 10px;
+	min-width: 150px;
 }
 
-.container{
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container div{
-    background-color:white;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-    margin-inline: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px 0px #000001;
-    transition: .3s ease box-shadow;
-}
-
-.container div:hover{
-    box-shadow: 0px 0px 10px 0px #000001;
-}
-
-.container h2{
-    height: 7vh;
-    margin: 20px 0;
-    font-size: 60px;
-}
-
-.arrow{
-    background-color: transparent!important;
-    padding: 0 100px!important;
-    box-shadow: none!important;
-    cursor: default!important;
-}
-.arrow img{
-    width: 80px;
+.key small {
+	color: rgb(55, 52, 52);
+	font-size: 20px;
+	position: absolute;
+	top: -30px;
+	left: 0;
+	text-align: center;
+	width: 100%;
 }
