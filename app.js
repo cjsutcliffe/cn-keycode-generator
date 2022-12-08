@@ -1,6 +1,7 @@
 const insert = document.getElementById('insert');
 
-window.addEventListener('keydown', (e) => {
+//note - differences in what is returned between 'keypress' and 'keydown'
+document.addEventListener('keypress', (e) => {
 	console.log(e);
 
 // use innerHTML to write new content to div "key"
@@ -10,16 +11,11 @@ window.addEventListener('keydown', (e) => {
 			<small>event.key</small>
 		</div>
 		<div class="key">
-			${e.keyCode}
-			<small>event.keyCode</small>
-		</div>
-		<div class="key">
 			${e.code}
 			<small>event.code</small>
 		</div>
-        <div class="key">
-			${e.which}
-			<small>event.which</small>
-		</div>
+		<div class="key">
+			${e.charCode}
+			<small>event.charCode</small>
 	`
 });
